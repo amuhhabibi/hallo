@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>docs</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body class="overflow-hidden bg-gradient-to-r from-color1-10 to-color1-20" style="height: 100vh;" onload="tungguBentar()">
+        <div class="flex justify-center items-center h-screen w-screen">
+                <!-- button tulisan -->
+                <button id="tulisan" class=" group bg-color2-50 hover:bg-color2-120 focus:bg-color2-120 w-20 h-20 m-2 text-color1-140 text-2xl transition rounded-md hover:border-double hover:border-4 focus:border-double focus:border-4 border-orange-400 shadow-lg shadow-color2-30 duration-500 delay-75 hover:shadow-lg hover:shadow-orange-900 hover:scale-125 focus:shadow-lg focus:shadow-orange-900 focus:scale-125 sepia animate-slideright"> <span class="brightness-50 group-hover:brightness-90 ">↩️</span></button>
+        </div>
+</body>
+<script>
+
+    function tungguBentar(){
+        setTimeout(function(){
+            tulisan.classList.remove("animate-slideright");
+            tulisan.classList.remove("animate-slideright");
+            // console.log("done")
+        },1401);
+    }
+
+     document.querySelector("#tulisan").addEventListener('click', function() {
+        window.location.replace("/public/");
+    });
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>docs</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body class="overflow-hidden bg-gradient-to-r from-color1-10 to-color1-20" style="height: 100vh;" onload="tungguBentar()">
+    <div class="grid grid-cols-3 grid-rows-3 h-screen w-screen">
+        <div class="flex justify-center items-center col-span-3 row-start-2">
+            <div id="tempat" class="grid grid-cols-2">
+                <!-- button tulisan -->
+                <button id="tulisan" class=" group bg-color2-50 hover:bg-color2-120 focus:bg-color2-120 w-20 h-20 m-2 text-color1-140 text-2xl transition rounded-md hover:border-double hover:border-4 focus:border-double focus:border-4 border-orange-400 shadow-lg shadow-color2-30 duration-500 delay-75 hover:shadow-lg hover:shadow-orange-900 hover:scale-125 focus:shadow-lg focus:shadow-orange-900 focus:scale-125 sepia animate-slideright"> <span class="brightness-50 group-hover:brightness-90 ">✏️</span></button>
+
+                <!-- button gambar -->
+                <button id="gambar" class=" group bg-color2-50  hover:bg-color2-120 focus:bg-color2-120 w-20 h-20 m-2 text-color1-140 text-2xl transition rounded-md hover:border-double hover:border-4 focus:border-double focus:border-4 border-orange-400 shadow-lg shadow-color2-30 duration-500 delay-75 hover:shadow-lg hover:shadow-orange-900 hover:scale-125 focus:shadow-lg focus:shadow-orange-900 focus:scale-125 grayscale animate-slidedown"> <span class="brightness-50 group-hover:brightness-90 ">🖼️</span></button>
+                
+                <!-- button lainnya -->
+                <button id="lainnya" class=" group bg-color2-50 hover:bg-color2-120 focus:bg-color2-120 w-20 h-20 m-2 text-color1-140 text-2xl transition rounded-md hover:border-double hover:border-4 focus:border-double focus:border-4 border-orange-400 shadow-lg shadow-color2-30 duration-500 delay-75 hover:shadow-lg hover:shadow-orange-900 hover:scale-125 focus:shadow-lg focus:shadow-orange-900 focus:scale-125 grayscale animate-slideup"> <span class="brightness-50 group-hover:brightness-90 ">✉️</span></button>
+
+                <!-- button tentang -->
+                <button id="tentang" class=" group bg-color2-50 hover:bg-color2-120 focus:bg-color2-120 w-20 h-20 m-2 text-color1-140 text-2xl transition rounded-md hover:border-double hover:border-4 focus:border-double focus:border-4 border-orange-400 shadow-lg shadow-color2-30 duration-500 delay-75 hover:shadow-lg hover:shadow-orange-900 hover:scale-125 focus:shadow-lg focus:shadow-orange-900 focus:scale-125 sepia animate-slideleft"> <span class="brightness-50 group-hover:brightness-90 ">🐼</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    function tungguBentar(){
+        setTimeout(function(){
+            lainnya.classList.remove("animate-slideup");
+            lainnya.classList.remove("animate-slideup");
+            // console.log("done")
+        },1301);
+        setTimeout(function(){
+            tulisan.classList.remove("animate-slideright");
+            tulisan.classList.remove("animate-slideright");
+            // console.log("done")
+        },1401);
+        setTimeout(function(){
+            gambar.classList.remove("animate-slidedown");
+            gambar.classList.remove("animate-slidedown");
+            // console.log("done")
+        },1501);
+        setTimeout(function(){
+            tentang.classList.remove("animate-slideleft");
+            tentang.classList.remove("animate-slideleft");
+            // console.log("done")
+        },1601);
+    }
+
+     document.querySelector("#tulisan").addEventListener('click', function() {
+        window.location.replace("/public/tulisan/");
+    });
+    document.querySelector("#gambar").addEventListener('click', function() {
+        window.location.replace("/public/gambar/");
+    });
+    document.querySelector("#lainnya").addEventListener('click', function() {
+        window.location.replace("/public/lainnya/");
+    });
+    document.querySelector("#tentang").addEventListener('click', function() {
+        window.location.replace("/public/tentang/");
+    });
+</script>
+</html>
